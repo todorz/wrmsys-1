@@ -22,9 +22,8 @@ public class AddJuiceTypeServlet extends HttpServlet {
 
 	    public void doPost(HttpServletRequest req, HttpServletResponse resp)
 	                throws IOException {
-
-//	        JuiceTypeUtils.insertNew(req.getParameter("juicename"), req.getParameter("juicecolour"), req.getParameter("juicedescription"));
-       JuiceTypeUtils.insertNew("Blowit", "juicecolour", "juicedescription");
+	        JuiceTypeUtils.insertNew(req.getParameter("juicename"), req.getParameter("juicecolour"), req.getParameter("juicedescription"));
+  
 	        
 	resp.sendRedirect("/addJuiceType.jsp");
 	    }
