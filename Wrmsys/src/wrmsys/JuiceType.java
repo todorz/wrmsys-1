@@ -1,9 +1,12 @@
 package wrmsys;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.IdentityType;
+import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+@PersistenceCapable(identityType=IdentityType.APPLICATION)
 public class JuiceType {
 	public Long getJuiceTypeId() {
 		return juiceTypeId;
@@ -37,10 +40,9 @@ public class JuiceType {
 		this.juiceDescription = juiceDescription;
 	}
 
-	public JuiceType(Long juiceTypeId, String juiceName, String juiceColor,
+	public JuiceType(String juiceName, String juiceColor,
 			String juiceDescription) {
 		super();
-		this.juiceTypeId = juiceTypeId;
 		this.juiceName = juiceName;
 		this.juiceColor = juiceColor;
 		this.juiceDescription = juiceDescription;
@@ -53,10 +55,10 @@ public class JuiceType {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Long juiceTypeId;
-
+	@Persistent
 	private String juiceName;
-
+	@Persistent
 	private String juiceColor;
-
+	@Persistent
 	private String juiceDescription;
 }

@@ -20,10 +20,10 @@
     User user = userService.getCurrentUser();
 %>
 
-    <form action="/updateJuiceType" method="post">
-      <div>Juice Name: <input type="text" name="juiceName"</div>
-      <div>Juice Colour: <input type="text" name="juiceColour"</div>
-      <div>Juice Description: <textarea name="juiceDescription" rows="3" cols="60"></textarea></div>
+    <form action="/addJuiceType" method="post">
+      <div>Juice Name: <input type="text" name="juicename"</div>
+      <div>Juice Colour: <input type="text" name="juicecolour"</div>
+      <div>Juice Description: <textarea name="juicedescription" rows="3" cols="60"></textarea></div>
       <div><input type="submit" value="Submit" /></div>
     </form>
 
