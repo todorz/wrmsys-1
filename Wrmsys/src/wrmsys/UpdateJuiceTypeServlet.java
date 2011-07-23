@@ -7,6 +7,6 @@ import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
-public class updateJuiceTypeServlet extends HttpServlet {
+public class UpdateJuiceTypeServlet extends HttpServlet {
 
 }
